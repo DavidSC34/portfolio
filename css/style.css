@@ -4,6 +4,7 @@
     --primario: #f1a94e;
     --secundario: #44b3c2;
     --claro: #ffffff;
+    --oscuro: #5b5b5b;
 }
 
 html {
@@ -106,5 +107,28 @@ p {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
         column-gap: 2rem;
+    }
+}
+
+
+/*Portafolio*/
+
+.elemento {
+    border-bottom: 1px solid var(--oscuro);
+    margin-bottom: 3rem;
+}
+
+@media (min-width:768px) {
+    .listado {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 2rem;
+        grid-auto-rows: max-content;
+    }
+    .elemento {
+        border: none;
+    }
+    .elemento:nth-child(3) {
+        grid-row-end: span 2;
     }
 }
