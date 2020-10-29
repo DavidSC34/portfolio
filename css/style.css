@@ -36,6 +36,12 @@ h3 {
     font-size: 2.4rem;
 }
 
+p {
+    font-family: var(--fuentePrincipal);
+    font-size: 1.2rem;
+    line-height: 2rem;
+}
+
 
 /*hero*/
 
@@ -64,4 +70,41 @@ h3 {
 
 .subtitulo {
     font-size: 1.6rem;
+}
+
+
+/*servicios*/
+
+.servicios {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.servicios h2 {
+    padding-bottom: 2rem;
+}
+
+
+/*crea la rayita debajo del titulo*/
+
+.servicios h2::after {
+    height: 0.5rem;
+    width: 7rem;
+    background-color: var(--primario);
+    content: '';
+    display: block;
+    margin: 1rem auto 0 auto;
+}
+
+.servicios i {
+    font-size: 3rem;
+    color: var(--secundario);
+}
+
+@media (min-width:768px) {
+    .servicios {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        column-gap: 2rem;
+    }
 }
